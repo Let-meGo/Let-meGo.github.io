@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/11 | Edward的个人博客</title>
+  <title>JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并) | Edward的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="欢迎大家">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Edward的个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/11/index.html">
+  <meta name="description" content="POP 删除最后一项 var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2]  shift 删除第一项 var a = [1,2,3,4,5];a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]  push 增加到最后 var a =">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)">
+<meta property="og:url" content="http://yoursite.com/2017/11/17/zhishi/index.html">
 <meta property="og:site_name" content="Edward的个人博客">
-<meta property="og:description" content="欢迎大家">
+<meta property="og:description" content="POP 删除最后一项 var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2]  shift 删除第一项 var a = [1,2,3,4,5];a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]  push 增加到最后 var a =">
 <meta property="og:locale" content="中文">
+<meta property="og:updated_time" content="2017-11-17T07:01:34.095Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Edward的个人博客">
-<meta name="twitter:description" content="欢迎大家">
+<meta name="twitter:title" content="JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)">
+<meta name="twitter:description" content="POP 删除最后一项 var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2]  shift 删除第一项 var a = [1,2,3,4,5];a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]  push 增加到最后 var a =">
   
     <link rel="alternative" href="/atom.xml" title="Edward的个人博客" type="application/atom+xml">
   
@@ -157,130 +158,214 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-zhishi" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/17/zhishi/" class="archive-article-date">
+
+        
+        <a href="/2017/11/17/zhishi/" class="archive-article-date">
   	<time datetime="2017-11-17T06:02:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/17/zhishi/">JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="POP-删除最后一项"><a href="#POP-删除最后一项" class="headerlink" title="POP 删除最后一项"></a>POP 删除最后一项</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.pop(); <code>//a：[1, 2, 3, 4]</code><br>a.pop(); <code>//a：[1, 2, 3]</code><br>a.pop(); <code>//a：[1, 2]</code></p>
+</blockquote>
+<h3 id="shift-删除第一项"><a href="#shift-删除第一项" class="headerlink" title="shift 删除第一项"></a>shift 删除第一项</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.shift(); <code>//a：[2,3,4,5]</code><br>a.shift(); <code>//a：[3, 4, 5]</code></p>
+</blockquote>
+<h3 id="push-增加到最后"><a href="#push-增加到最后" class="headerlink" title="push 增加到最后"></a>push 增加到最后</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.push(6); <code>//[1, 2, 3, 4, 5, 6]</code><br>aa.push(‘xx’); <code>//[1, 2, 3, 4, 5, 6, &quot;xx&quot;] 返回长度7</code><br>a.push(‘yy’); <code>//[1, 2, 3, 4, 5, 6, &quot;xx&quot;, &quot;yy&quot;] 返回长度8</code></p>
+</blockquote>
+<h3 id="unshift增加到最前"><a href="#unshift增加到最前" class="headerlink" title="unshift增加到最前"></a>unshift增加到最前</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.unshift();<code>//[1, 2, 3, 4, 5]</code><br>a.unshift(“cc”);<code>//[&quot;cc&quot;, 1, 2, 3, 4, 5] 返回长度6</code><br>a.unshift(“aaa”);<code>//[&quot;aaa&quot;, &quot;cc&quot;, 1, 2, 3, 4, 5] 返回长度7</code></p>
+</blockquote>
+<h3 id="reverse-数组翻转"><a href="#reverse-数组翻转" class="headerlink" title="reverse 数组翻转"></a>reverse 数组翻转</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.reverse()<code>//a：[5, 4, 3, 2, 1] 返回[5, 4, 3, 2, 1]</code></p>
+</blockquote>
+<h3 id="join数组转成字符串"><a href="#join数组转成字符串" class="headerlink" title="join数组转成字符串"></a>join数组转成字符串</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>var b=a.join(‘||’);<code>//b:&quot;1||2||3||4||5&quot; a:[1,2,3,4,5]</code></p>
+</blockquote>
+<h3 id="indexOf数组元素索引"><a href="#indexOf数组元素索引" class="headerlink" title="indexOf数组元素索引"></a>indexOf数组元素索引</h3><blockquote>
+<p>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.indexOf(‘a’);<code>//0</code><br>a.indexOf(a);<code>//-1</code><br>a.indexOf(‘f’);<code>//-1</code><br>a.indexOf(‘e’);<code>//4</code></p>
+</blockquote>
+<h3 id="slice截取-切片-数组-得到截取的数组"><a href="#slice截取-切片-数组-得到截取的数组" class="headerlink" title="slice截取(切片)数组 得到截取的数组"></a>slice截取(切片)数组 得到截取的数组</h3><blockquote>
+<p>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.slice(1,3);<code>//[&quot;b&quot;, &quot;c&quot;] a:[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]</code><br>a.slice(0,4);<code>//[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</code><br>a.slice(3,4);<code>//[&quot;d&quot;]</code></p>
+</blockquote>
+<h3 id="splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始"><a href="#splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始" class="headerlink" title="splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始"></a>splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始</h3><blockquote>
+<p>/<em>参数是2个</em>/<br>//第一参数是索引（从0开始），第二是长度<br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(0,2);<code>//[&quot;a&quot;, &quot;b&quot;] a:[&quot;c&quot;, &quot;d&quot;, &quot;e&quot;]</code><br>a.splice(0,2);<code>//[&quot;c&quot;, &quot;d&quot;] a:[&quot;e&quot;]</code><br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(0,1);<code>//[&quot;a&quot;] a:[&quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] 同shift前删除</code><br>var a = [‘a’,’b’,’c’,’d’,’e’]<br>a.splice(a.length-1,1)l<code>//[&quot;e&quot;] a:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;] 同pop前删除</code><br>/<em>参数大于2个</em>/<br>//splice(start,deleteCount,val1,val2,…)：从start位置开始删除deleteCount项，并从该位置起插入val1,val2,…<br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(3,1,10,21,238,99);<code>//[&quot;d&quot;] a:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, 10, 21, 238, 99, &quot;e&quot;]</code><br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(a.length,100000000,88)<code>//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, 88] 同push后增加</code><br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(a.length,0,88)<code>//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, 88] 同push后增加</code><br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(0,0,88,99)<code>//返回 [] 从第一个元素，截取长度0个 肯定是空 a:[88, 99, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] 同unshift前增加</code></p>
+</blockquote>
+<h3 id="concat数组合并"><a href="#concat数组合并" class="headerlink" title="concat数组合并"></a>concat数组合并</h3><blockquote>
+<p>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.concat([88,99]);<code>//[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, 88, 99] a:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]</code><br>var b= [9999,10000]<br>a.concat(b);<code>// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, 9999, 10000] a:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]</code></p>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/11/17/zhishi/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/15/我的日记/" class="archive-article-date">
-  	<time datetime="2017-11-15T06:15:32.922Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-15</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/15/我的日记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">搭建个人博客-Hexo+github</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/15/我的日记/">搭建个人博客-Hexo+github</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#POP-删除最后一项"><span class="toc-number">1.</span> <span class="toc-text">POP 删除最后一项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shift-删除第一项"><span class="toc-number">2.</span> <span class="toc-text">shift 删除第一项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#push-增加到最后"><span class="toc-number">3.</span> <span class="toc-text">push 增加到最后</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unshift增加到最前"><span class="toc-number">4.</span> <span class="toc-text">unshift增加到最前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reverse-数组翻转"><span class="toc-number">5.</span> <span class="toc-text">reverse 数组翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#join数组转成字符串"><span class="toc-number">6.</span> <span class="toc-text">join数组转成字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#indexOf数组元素索引"><span class="toc-number">7.</span> <span class="toc-text">indexOf数组元素索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#slice截取-切片-数组-得到截取的数组"><span class="toc-number">8.</span> <span class="toc-text">slice截取(切片)数组 得到截取的数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始"><span class="toc-number">9.</span> <span class="toc-text">splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#concat数组合并"><span class="toc-number">10.</span> <span class="toc-text">concat数组合并</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/10/article-title/" class="archive-article-date">
-  	<time datetime="2017-11-10T07:28:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/10/article-title/">程序员如何赚「睡后」收入？</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/10/hello-world/" class="archive-article-date">
-  	<time datetime="2017-11-10T06:33:26.183Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/10/hello-world/">第一次使用</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+  
+    <section id="comments">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'true'; // required: replace example with your forum shortname
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
   
 
-    
+  
 
 
           </div>
@@ -303,8 +388,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

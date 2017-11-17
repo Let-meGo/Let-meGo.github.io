@@ -159,6 +159,98 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-zhishi" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/17/zhishi/">JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/17/zhishi/" class="archive-article-date">
+  	<time datetime="2017-11-17T06:02:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="POP-删除最后一项"><a href="#POP-删除最后一项" class="headerlink" title="POP 删除最后一项"></a>POP 删除最后一项</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.pop(); <code>//a：[1, 2, 3, 4]</code><br>a.pop(); <code>//a：[1, 2, 3]</code><br>a.pop(); <code>//a：[1, 2]</code></p>
+</blockquote>
+<h3 id="shift-删除第一项"><a href="#shift-删除第一项" class="headerlink" title="shift 删除第一项"></a>shift 删除第一项</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.shift(); <code>//a：[2,3,4,5]</code><br>a.shift(); <code>//a：[3, 4, 5]</code></p>
+</blockquote>
+<h3 id="push-增加到最后"><a href="#push-增加到最后" class="headerlink" title="push 增加到最后"></a>push 增加到最后</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.push(6); <code>//[1, 2, 3, 4, 5, 6]</code><br>aa.push(‘xx’); <code>//[1, 2, 3, 4, 5, 6, &quot;xx&quot;] 返回长度7</code><br>a.push(‘yy’); <code>//[1, 2, 3, 4, 5, 6, &quot;xx&quot;, &quot;yy&quot;] 返回长度8</code></p>
+</blockquote>
+<h3 id="unshift增加到最前"><a href="#unshift增加到最前" class="headerlink" title="unshift增加到最前"></a>unshift增加到最前</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.unshift();<code>//[1, 2, 3, 4, 5]</code><br>a.unshift(“cc”);<code>//[&quot;cc&quot;, 1, 2, 3, 4, 5] 返回长度6</code><br>a.unshift(“aaa”);<code>//[&quot;aaa&quot;, &quot;cc&quot;, 1, 2, 3, 4, 5] 返回长度7</code></p>
+</blockquote>
+<h3 id="reverse-数组翻转"><a href="#reverse-数组翻转" class="headerlink" title="reverse 数组翻转"></a>reverse 数组翻转</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>a.reverse()<code>//a：[5, 4, 3, 2, 1] 返回[5, 4, 3, 2, 1]</code></p>
+</blockquote>
+<h3 id="join数组转成字符串"><a href="#join数组转成字符串" class="headerlink" title="join数组转成字符串"></a>join数组转成字符串</h3><blockquote>
+<p>var a = [1,2,3,4,5];<br>var b=a.join(‘||’);<code>//b:&quot;1||2||3||4||5&quot; a:[1,2,3,4,5]</code></p>
+</blockquote>
+<h3 id="indexOf数组元素索引"><a href="#indexOf数组元素索引" class="headerlink" title="indexOf数组元素索引"></a>indexOf数组元素索引</h3><blockquote>
+<p>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.indexOf(‘a’);<code>//0</code><br>a.indexOf(a);<code>//-1</code><br>a.indexOf(‘f’);<code>//-1</code><br>a.indexOf(‘e’);<code>//4</code></p>
+</blockquote>
+<h3 id="slice截取-切片-数组-得到截取的数组"><a href="#slice截取-切片-数组-得到截取的数组" class="headerlink" title="slice截取(切片)数组 得到截取的数组"></a>slice截取(切片)数组 得到截取的数组</h3><blockquote>
+<p>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.slice(1,3);<code>//[&quot;b&quot;, &quot;c&quot;] a:[&#39;a&#39;,&#39;b&#39;,&#39;c&#39;,&#39;d&#39;,&#39;e&#39;]</code><br>a.slice(0,4);<code>//[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</code><br>a.slice(3,4);<code>//[&quot;d&quot;]</code></p>
+</blockquote>
+<h3 id="splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始"><a href="#splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始" class="headerlink" title="splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始"></a>splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始</h3><blockquote>
+<p>/<em>参数是2个</em>/<br>//第一参数是索引（从0开始），第二是长度<br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(0,2);<code>//[&quot;a&quot;, &quot;b&quot;] a:[&quot;c&quot;, &quot;d&quot;, &quot;e&quot;]</code><br>a.splice(0,2);<code>//[&quot;c&quot;, &quot;d&quot;] a:[&quot;e&quot;]</code><br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(0,1);<code>//[&quot;a&quot;] a:[&quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] 同shift前删除</code><br>var a = [‘a’,’b’,’c’,’d’,’e’]<br>a.splice(a.length-1,1)l<code>//[&quot;e&quot;] a:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;] 同pop前删除</code><br>/<em>参数大于2个</em>/<br>//splice(start,deleteCount,val1,val2,…)：从start位置开始删除deleteCount项，并从该位置起插入val1,val2,…<br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(3,1,10,21,238,99);<code>//[&quot;d&quot;] a:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, 10, 21, 238, 99, &quot;e&quot;]</code><br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(a.length,100000000,88)<code>//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, 88] 同push后增加</code><br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(a.length,0,88)<code>//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, 88] 同push后增加</code><br>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.splice(0,0,88,99)<code>//返回 [] 从第一个元素，截取长度0个 肯定是空 a:[88, 99, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;] 同unshift前增加</code></p>
+</blockquote>
+<h3 id="concat数组合并"><a href="#concat数组合并" class="headerlink" title="concat数组合并"></a>concat数组合并</h3><blockquote>
+<p>var a = [‘a’,’b’,’c’,’d’,’e’];<br>a.concat([88,99]);<code>//[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, 88, 99] a:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]</code><br>var b= [9999,10000]<br>a.concat(b);<code>// [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, 9999, 10000] a:[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]</code></p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/17/zhishi/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的日记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
