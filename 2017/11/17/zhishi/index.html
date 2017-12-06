@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并) | Edward的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5] push 增加到最后1234v">
+  <meta name="description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)">
 <meta property="og:url" content="http://yoursite.com/2017/11/17/zhishi/index.html">
 <meta property="og:site_name" content="Edward的个人博客">
-<meta property="og:description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5] push 增加到最后1234v">
+<meta property="og:description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2017-11-20T03:17:10.744Z">
+<meta property="og:updated_time" content="2017-12-06T05:58:08.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)">
-<meta name="twitter:description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5] push 增加到最后1234v">
+<meta name="twitter:description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]">
   
     <link rel="alternative" href="/atom.xml" title="Edward的个人博客" type="application/atom+xml">
   
@@ -180,6 +181,7 @@
       
         <h3 id="POP-删除最后一项"><a href="#POP-删除最后一项" class="headerlink" title="POP 删除最后一项"></a>POP 删除最后一项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2, 3, 4]</span></span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2, 3]</span></span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2]</span></span><br></pre></td></tr></table></figure>
 <h3 id="shift-删除第一项"><a href="#shift-删除第一项" class="headerlink" title="shift 删除第一项"></a>shift 删除第一项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.shift(); <span class="comment">//a：[2,3,4,5]</span></span><br><span class="line">a.shift(); <span class="comment">//a：[3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="push-增加到最后"><a href="#push-增加到最后" class="headerlink" title="push 增加到最后"></a>push 增加到最后</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.push(<span class="number">6</span>); <span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br><span class="line">aa.push(<span class="string">'xx'</span>); <span class="comment">//[1, 2, 3, 4, 5, 6, "xx"] 返回长度7</span></span><br><span class="line">a.push(<span class="string">'yy'</span>); <span class="comment">//[1, 2, 3, 4, 5, 6, "xx", "yy"] 返回长度8</span></span><br></pre></td></tr></table></figure>
 <h3 id="unshift增加到最前"><a href="#unshift增加到最前" class="headerlink" title="unshift增加到最前"></a>unshift增加到最前</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.unshift();<span class="comment">//[1, 2, 3, 4, 5]</span></span><br><span class="line">a.unshift(<span class="string">"cc"</span>);<span class="comment">//["cc", 1, 2, 3, 4, 5] 返回长度6</span></span><br><span class="line">a.unshift(<span class="string">"aaa"</span>);<span class="comment">//["aaa", "cc", 1, 2, 3, 4, 5] 返回长度7</span></span><br></pre></td></tr></table></figure>
 <h3 id="reverse-数组翻转"><a href="#reverse-数组翻转" class="headerlink" title="reverse 数组翻转"></a>reverse 数组翻转</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.reverse()<span class="comment">//a：[5, 4, 3, 2, 1] 返回[5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure>
@@ -203,11 +205,11 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
-                    
                     <div class="reward-box-item">
-                      <img class="reward-img" src="/wechat.png">
-                      <span class="reward-type">微信</span>
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
                     </div>
+                    
                     
                   </div>
                 </span>
@@ -221,6 +223,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -316,19 +329,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#POP-删除最后一项"><span class="toc-number">1.</span> <span class="toc-text">POP 删除最后一项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shift-删除第一项"><span class="toc-number">2.</span> <span class="toc-text">shift 删除第一项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#push-增加到最后"><span class="toc-number">3.</span> <span class="toc-text">push 增加到最后</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unshift增加到最前"><span class="toc-number">4.</span> <span class="toc-text">unshift增加到最前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reverse-数组翻转"><span class="toc-number">5.</span> <span class="toc-text">reverse 数组翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#join数组转成字符串"><span class="toc-number">6.</span> <span class="toc-text">join数组转成字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#indexOf数组元素索引"><span class="toc-number">7.</span> <span class="toc-text">indexOf数组元素索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#slice截取-切片-数组-得到截取的数组"><span class="toc-number">8.</span> <span class="toc-text">slice截取(切片)数组 得到截取的数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始"><span class="toc-number">9.</span> <span class="toc-text">splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#concat数组合并"><span class="toc-number">10.</span> <span class="toc-text">concat数组合并</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -385,7 +385,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -449,6 +449,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

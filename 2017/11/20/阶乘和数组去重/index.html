@@ -9,13 +9,14 @@
   <title>阶乘和数组去重 | Edward的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="阶乘的实现方法（一种递归，两种循环）：方法1：递归12345678910function factorial (num) &amp;#123;if (num &amp;lt; 0) &amp;#123;     return -1; &amp;#125; else if (num === 0 || num === 1) &amp;#123;     return 1; &amp;#125; else &amp;#123;     return (num">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="阶乘和数组去重">
 <meta property="og:url" content="http://yoursite.com/2017/11/20/阶乘和数组去重/index.html">
 <meta property="og:site_name" content="Edward的个人博客">
 <meta property="og:description" content="阶乘的实现方法（一种递归，两种循环）：方法1：递归12345678910function factorial (num) &amp;#123;if (num &amp;lt; 0) &amp;#123;     return -1; &amp;#125; else if (num === 0 || num === 1) &amp;#123;     return 1; &amp;#125; else &amp;#123;     return (num">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2017-11-20T03:26:58.738Z">
+<meta property="og:updated_time" content="2017-12-06T05:57:34.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阶乘和数组去重">
 <meta name="twitter:description" content="阶乘的实现方法（一种递归，两种循环）：方法1：递归12345678910function factorial (num) &amp;#123;if (num &amp;lt; 0) &amp;#123;     return -1; &amp;#125; else if (num === 0 || num === 1) &amp;#123;     return 1; &amp;#125; else &amp;#123;     return (num">
@@ -179,6 +180,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="阶乘的实现方法（一种递归，两种循环）："><a href="#阶乘的实现方法（一种递归，两种循环）：" class="headerlink" title="阶乘的实现方法（一种递归，两种循环）："></a>阶乘的实现方法（一种递归，两种循环）：</h1><h2 id="方法1：递归"><a href="#方法1：递归" class="headerlink" title="方法1：递归"></a>方法1：递归</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (num === <span class="number">0</span> || num === <span class="number">1</span>) &#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">&#125; <span class="keyword">else</span> &#123; </span><br><span class="line">    <span class="keyword">return</span> (num * factorial(num - <span class="number">1</span>)); </span><br><span class="line">&#125;</span><br><span class="line">&#125;; factorial(<span class="number">6</span>);<span class="comment">//720</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="方法2：for循环"><a href="#方法2：for循环" class="headerlink" title="方法2：for循环"></a>方法2：for循环</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (num === <span class="number">0</span> || num === <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = num - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">        num *= i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> num;</span><br><span class="line">&#125;; factorial(<span class="number">6</span>);<span class="comment">//720</span></span><br></pre></td></tr></table></figure>
 <h2 id="方法3：while循环"><a href="#方法3：while循环" class="headerlink" title="方法3：while循环"></a>方法3：while循环</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = num; </span><br><span class="line">    <span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123; </span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (num === <span class="number">0</span> || num === <span class="number">1</span>) &#123; </span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; </span><br><span class="line">        <span class="keyword">while</span> (num &gt; <span class="number">1</span>) &#123; </span><br><span class="line">            num--; </span><br><span class="line">            result *= num; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;; factorial(<span class="number">6</span>);<span class="comment">//720</span></span><br></pre></td></tr></table></figure>
 <h1 id="数组去重的四种方法"><a href="#数组去重的四种方法" class="headerlink" title="数组去重的四种方法"></a>数组去重的四种方法</h1><h2 id="1-最基本的去重方法"><a href="#1-最基本的去重方法" class="headerlink" title="1.最基本的去重方法"></a>1.最基本的去重方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">思路：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中。</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">　　<span class="keyword">var</span> res = [arr[<span class="number">0</span>]];</span><br><span class="line">　　<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">　　　　<span class="keyword">var</span> repeat = <span class="literal">false</span>;</span><br><span class="line">　　　　<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;res.length;j++)&#123;</span><br><span class="line">　　　　　　<span class="keyword">if</span>(arr[i] == res[j])&#123;</span><br><span class="line">　　　　　　　　repeat = <span class="literal">true</span>;</span><br><span class="line">　　　　　　　　<span class="keyword">break</span>;</span><br><span class="line">　　　　　　&#125;</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　　　<span class="keyword">if</span>(!repeat)&#123;</span><br><span class="line">　　　　　　res.push(arr[i]);</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　&#125;</span><br><span class="line">　　<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -201,11 +203,11 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
-                    
                     <div class="reward-box-item">
-                      <img class="reward-img" src="/wechat.png">
-                      <span class="reward-type">微信</span>
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
                     </div>
+                    
                     
                   </div>
                 </span>
@@ -219,6 +221,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -314,19 +327,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#阶乘的实现方法（一种递归，两种循环）："><span class="toc-number">1.</span> <span class="toc-text">阶乘的实现方法（一种递归，两种循环）：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法1：递归"><span class="toc-number">1.1.</span> <span class="toc-text">方法1：递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法2：for循环"><span class="toc-number">1.2.</span> <span class="toc-text">方法2：for循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法3：while循环"><span class="toc-number">1.3.</span> <span class="toc-text">方法3：while循环</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数组去重的四种方法"><span class="toc-number">2.</span> <span class="toc-text">数组去重的四种方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-最基本的去重方法"><span class="toc-number">2.1.</span> <span class="toc-text">1.最基本的去重方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-先排序在去重"><span class="toc-number">2.2.</span> <span class="toc-text">2.先排序在去重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-利用对象的属性去重（推荐）"><span class="toc-number">2.3.</span> <span class="toc-text">3.利用对象的属性去重（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-利用下标查询"><span class="toc-number">2.4.</span> <span class="toc-text">4.利用下标查询</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -383,7 +383,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -447,6 +447,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

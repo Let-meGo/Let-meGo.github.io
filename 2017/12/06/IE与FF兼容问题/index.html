@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>IE与FF兼容问题 | Edward的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which   事件源的获取：1let target">
+  <meta name="description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IE与FF兼容问题">
 <meta property="og:url" content="http://yoursite.com/2017/12/06/IE与FF兼容问题/index.html">
 <meta property="og:site_name" content="Edward的个人博客">
-<meta property="og:description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which   事件源的获取：1let target">
+<meta property="og:description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2017-12-06T02:13:09.757Z">
+<meta property="og:updated_time" content="2017-12-06T05:59:07.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IE与FF兼容问题">
-<meta name="twitter:description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which   事件源的获取：1let target">
+<meta name="twitter:description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which">
   
     <link rel="alternative" href="/atom.xml" title="Edward的个人博客" type="application/atom+xml">
   
@@ -182,6 +183,7 @@
 <hr>
 <p> 键盘值的获取： Firfox下event.which和IE的event.keyCode相当<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> key = event.keyCode || event.which</span><br></pre></td></tr></table></figure></p>
 <hr>
+<a id="more"></a>
 <p> 事件源的获取：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> target = event.srcElement || event.target</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p> 事件监听:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IE: element.attacthEvent(<span class="string">'on'</span> + eventName, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br><span class="line">Firfox: element.addEventListener(eventName, handler, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure></p>
@@ -207,11 +209,11 @@
                   <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
                   <div class="reward-box">
                     
-                    
                     <div class="reward-box-item">
-                      <img class="reward-img" src="/wechat.png">
-                      <span class="reward-type">微信</span>
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
                     </div>
+                    
                     
                   </div>
                 </span>
@@ -225,6 +227,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -311,19 +324,6 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何处理IE和Firefox如果处理事件兼容性"><span class="toc-number">1.</span> <span class="toc-text">如何处理IE和Firefox如果处理事件兼容性</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
@@ -380,7 +380,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -444,6 +444,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>

@@ -183,16 +183,9 @@
 <hr>
 <p> 键盘值的获取： Firfox下event.which和IE的event.keyCode相当<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> key = event.keyCode || event.which</span><br></pre></td></tr></table></figure></p>
 <hr>
-<p> 事件源的获取：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> target = event.srcElement || event.target</span><br></pre></td></tr></table></figure></p>
-<hr>
-<p> 事件监听:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IE: element.attacthEvent(<span class="string">'on'</span> + eventName, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br><span class="line">Firfox: element.addEventListener(eventName, handler, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure></p>
-<hr>
-<p> 鼠标位置： 在IE下，event对象有x、y属性，在Firfox下，event有PageX, PageY属性 所有获取鼠标位置时：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = event.x || event.pageX</span><br></pre></td></tr></table></figure></p>
-<hr>
-<p> 阻止默认浏览器行为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.preventDefault() || event.returnValue = <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<p> 阻止冒泡事件：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.stopPropagation() || event.cancelBubble = <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-
+        
+          <a class="article-more-a" href="/2017/12/06/IE与FF兼容问题/#more">more >></a>
+        
       
 
       
@@ -200,6 +193,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -258,22 +262,18 @@
 <li>显示器 1280 x 800</li>
 <li>ipad 1024 x 768</li>
 <li>Android 800 x 480</li>
-<li>iPhone 640 x 960<h2 id="两种方式"><a href="#两种方式" class="headerlink" title="两种方式"></a>两种方式</h2><blockquote>
-<p>A:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"styleB.css"</span> <span class="attr">media</span>=<span class="string">"screen and (min-width: 600px) and (max-width: 800px)"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
+<li>iPhone 640 x 960<h2 id="两种方式"><a href="#两种方式" class="headerlink" title="两种方式"></a>两种方式</h2></li>
 </ul>
+<blockquote>
+<p>A:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"styleB.css"</span> <span class="attr">media</span>=<span class="string">"screen and (min-width: 600px) and (max-width: 800px)"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
 <p>意思是当屏幕的宽度大于600小于800时，应用styleB.css</p>
 <blockquote>
 <p>B:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> screen and (max-width: <span class="number">600px</span>) &#123;  <span class="comment">/*当屏幕尺寸小于600px时，应用下面的CSS样式*/</span></span><br><span class="line">  <span class="selector-class">.class</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#ccc</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>device-aspect-ratio可以用来适配特定屏幕长宽比的设备，这也是一个很有用的属性，比如，我们的页面想要对长宽比为4:3的普通屏幕定义一种样式，然后对于16:9和16:10的宽屏，定义另一种样式，比如自适应宽度和固定宽度：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> only screen and (device-aspect-ratio:<span class="number">4</span>/<span class="number">3</span>)</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h2><p>–HTML<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> <span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"header"</span>&gt;</span>Header<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"mid"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"top"</span>&gt;</span>small-box<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bottom"</span>&gt;</span>big-box<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"clear"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"footer"</span>&gt;</span>Footer<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>-CSS<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">color</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.header</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.footer</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">min-height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: brown;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: lightgrey;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: auto;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.mid</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">60%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: slateblue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: slategray;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.left</span>,</span><br><span class="line"><span class="selector-class">.mid</span>,</span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.clear</span> &#123;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.top</span>,</span><br><span class="line"><span class="selector-class">.bottom</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.top</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: skyblue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bottom</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">90px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: coral;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>-屏幕尺寸小于等于1024px<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> only screen and (max-width:<span class="number">1024px</span>) &#123;</span><br><span class="line">            <span class="selector-class">.header</span>,</span><br><span class="line">            <span class="selector-class">.footer</span>,</span><br><span class="line">            <span class="selector-class">.left</span>,</span><br><span class="line">            <span class="selector-class">.mid</span>,</span><br><span class="line">            <span class="selector-class">.right</span> &#123;</span><br><span class="line">                <span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">                <span class="attribute">font-weight</span>: bold;</span><br><span class="line">                <span class="attribute">color</span>: white;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="selector-class">.left</span> &#123;</span><br><span class="line">                <span class="attribute">width</span>: <span class="number">30%</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="selector-class">.mid</span> &#123;</span><br><span class="line">                <span class="attribute">width</span>: <span class="number">70%</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="selector-class">.right</span> &#123;</span><br><span class="line">                <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
-<p>-屏幕尺寸小于等于768px<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> only screen and (max-width:<span class="number">768px</span>) &#123;</span><br><span class="line">           <span class="selector-class">.left</span> &#123;</span><br><span class="line">               <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="selector-class">.mid</span> &#123;</span><br><span class="line">               <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="selector-class">.right</span> &#123;</span><br><span class="line">               <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="selector-class">.header</span>,</span><br><span class="line">           <span class="selector-class">.footer</span>,</span><br><span class="line">           <span class="selector-class">.left</span>,</span><br><span class="line">           <span class="selector-class">.mid</span>,</span><br><span class="line">           <span class="selector-class">.right</span> &#123;</span><br><span class="line">               <span class="attribute">font-size</span>: <span class="number">40px</span>;</span><br><span class="line">               <span class="attribute">font-weight</span>: bold;</span><br><span class="line">               <span class="attribute">color</span>: wheat;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
-
+        
+          <a class="article-more-a" href="/2017/12/05/简易响应式布局/#more">more >></a>
+        
       
 
       
@@ -281,6 +281,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -336,13 +347,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="阶乘的实现方法（一种递归，两种循环）："><a href="#阶乘的实现方法（一种递归，两种循环）：" class="headerlink" title="阶乘的实现方法（一种递归，两种循环）："></a>阶乘的实现方法（一种递归，两种循环）：</h1><h2 id="方法1：递归"><a href="#方法1：递归" class="headerlink" title="方法1：递归"></a>方法1：递归</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (num === <span class="number">0</span> || num === <span class="number">1</span>) &#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">&#125; <span class="keyword">else</span> &#123; </span><br><span class="line">    <span class="keyword">return</span> (num * factorial(num - <span class="number">1</span>)); </span><br><span class="line">&#125;</span><br><span class="line">&#125;; factorial(<span class="number">6</span>);<span class="comment">//720</span></span><br></pre></td></tr></table></figure>
-<h2 id="方法2：for循环"><a href="#方法2：for循环" class="headerlink" title="方法2：for循环"></a>方法2：for循环</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (num === <span class="number">0</span> || num === <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = num - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">        num *= i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> num;</span><br><span class="line">&#125;; factorial(<span class="number">6</span>);<span class="comment">//720</span></span><br></pre></td></tr></table></figure>
-<h2 id="方法3：while循环"><a href="#方法3：while循环" class="headerlink" title="方法3：while循环"></a>方法3：while循环</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = num; </span><br><span class="line">    <span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123; </span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (num === <span class="number">0</span> || num === <span class="number">1</span>) &#123; </span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; </span><br><span class="line">        <span class="keyword">while</span> (num &gt; <span class="number">1</span>) &#123; </span><br><span class="line">            num--; </span><br><span class="line">            result *= num; </span><br><span class="line">        &#125; </span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;; factorial(<span class="number">6</span>);<span class="comment">//720</span></span><br></pre></td></tr></table></figure>
-<h1 id="数组去重的四种方法"><a href="#数组去重的四种方法" class="headerlink" title="数组去重的四种方法"></a>数组去重的四种方法</h1><h2 id="1-最基本的去重方法"><a href="#1-最基本的去重方法" class="headerlink" title="1.最基本的去重方法"></a>1.最基本的去重方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">思路：定义一个新数组，并存放原数组的第一个元素，然后将元素组一一和新数组的元素对比，若不同则存放在新数组中。</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">　　<span class="keyword">var</span> res = [arr[<span class="number">0</span>]];</span><br><span class="line">　　<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">　　　　<span class="keyword">var</span> repeat = <span class="literal">false</span>;</span><br><span class="line">　　　　<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;res.length;j++)&#123;</span><br><span class="line">　　　　　　<span class="keyword">if</span>(arr[i] == res[j])&#123;</span><br><span class="line">　　　　　　　　repeat = <span class="literal">true</span>;</span><br><span class="line">　　　　　　　　<span class="keyword">break</span>;</span><br><span class="line">　　　　　　&#125;</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　　　<span class="keyword">if</span>(!repeat)&#123;</span><br><span class="line">　　　　　　res.push(arr[i]);</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　&#125;</span><br><span class="line">　　<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2-先排序在去重"><a href="#2-先排序在去重" class="headerlink" title="2.先排序在去重"></a>2.先排序在去重</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">思路：先将原数组排序，在与相邻的进行比较，如果不同则存入新数组</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">　　<span class="keyword">var</span> arr2 = arr.sort();</span><br><span class="line">　　<span class="keyword">var</span> res = [arr2[<span class="number">0</span>]];</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;arr2.length;i++)&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">if</span>(arr2[i] !== res[res.length<span class="number">-1</span>])&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　res.push(arr2[i]);</span><br><span class="line"></span><br><span class="line">　　　　&#125;</span><br><span class="line">　　&#125;</span><br><span class="line">　　<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-利用对象的属性去重（推荐）"><a href="#3-利用对象的属性去重（推荐）" class="headerlink" title="3.利用对象的属性去重（推荐）"></a>3.利用对象的属性去重（推荐）</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">思路：每次取出原数组的元素，然后再对象中访问这个属性，如果存在就说明重复</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">　　<span class="keyword">var</span> res =[];</span><br><span class="line">　　<span class="keyword">var</span> json = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">if</span>(!json[arr[i]])&#123;</span><br><span class="line"></span><br><span class="line">　　　　　　res.push(arr[i]);</span><br><span class="line"></span><br><span class="line">　　　　　　json[arr[i]] = <span class="number">1</span>;</span><br><span class="line">　　　　&#125;</span><br><span class="line">　　&#125;</span><br><span class="line">　　<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-利用下标查询"><a href="#4-利用下标查询" class="headerlink" title="4.利用下标查询"></a>4.利用下标查询</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line"> 　　<span class="keyword">var</span> newArr = [arr[<span class="number">0</span>]];</span><br><span class="line">　　 <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">　　　　<span class="keyword">if</span>(newArr.indexOf(arr[i]) == <span class="number">-1</span>)&#123;</span><br><span class="line">        　　 newArr.push(arr[i]);</span><br><span class="line">  　　  &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> newArr;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
+        
+          <a class="article-more-a" href="/2017/11/20/阶乘和数组去重/#more">more >></a>
+        
       
 
       
@@ -350,6 +357,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -406,14 +424,9 @@
       
         <h3 id="POP-删除最后一项"><a href="#POP-删除最后一项" class="headerlink" title="POP 删除最后一项"></a>POP 删除最后一项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2, 3, 4]</span></span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2, 3]</span></span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2]</span></span><br></pre></td></tr></table></figure>
 <h3 id="shift-删除第一项"><a href="#shift-删除第一项" class="headerlink" title="shift 删除第一项"></a>shift 删除第一项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.shift(); <span class="comment">//a：[2,3,4,5]</span></span><br><span class="line">a.shift(); <span class="comment">//a：[3, 4, 5]</span></span><br></pre></td></tr></table></figure>
-<h3 id="push-增加到最后"><a href="#push-增加到最后" class="headerlink" title="push 增加到最后"></a>push 增加到最后</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.push(<span class="number">6</span>); <span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br><span class="line">aa.push(<span class="string">'xx'</span>); <span class="comment">//[1, 2, 3, 4, 5, 6, "xx"] 返回长度7</span></span><br><span class="line">a.push(<span class="string">'yy'</span>); <span class="comment">//[1, 2, 3, 4, 5, 6, "xx", "yy"] 返回长度8</span></span><br></pre></td></tr></table></figure>
-<h3 id="unshift增加到最前"><a href="#unshift增加到最前" class="headerlink" title="unshift增加到最前"></a>unshift增加到最前</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.unshift();<span class="comment">//[1, 2, 3, 4, 5]</span></span><br><span class="line">a.unshift(<span class="string">"cc"</span>);<span class="comment">//["cc", 1, 2, 3, 4, 5] 返回长度6</span></span><br><span class="line">a.unshift(<span class="string">"aaa"</span>);<span class="comment">//["aaa", "cc", 1, 2, 3, 4, 5] 返回长度7</span></span><br></pre></td></tr></table></figure>
-<h3 id="reverse-数组翻转"><a href="#reverse-数组翻转" class="headerlink" title="reverse 数组翻转"></a>reverse 数组翻转</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.reverse()<span class="comment">//a：[5, 4, 3, 2, 1] 返回[5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure>
-<h3 id="join数组转成字符串"><a href="#join数组转成字符串" class="headerlink" title="join数组转成字符串"></a>join数组转成字符串</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line"><span class="keyword">var</span> b=a.join(<span class="string">'||'</span>);<span class="comment">//b:"1||2||3||4||5" a:[1,2,3,4,5]</span></span><br></pre></td></tr></table></figure>
-<h3 id="indexOf数组元素索引"><a href="#indexOf数组元素索引" class="headerlink" title="indexOf数组元素索引"></a>indexOf数组元素索引</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.indexOf(<span class="string">'a'</span>);<span class="comment">//0</span></span><br><span class="line">a.indexOf(a);<span class="comment">//-1</span></span><br><span class="line">a.indexOf(<span class="string">'f'</span>);<span class="comment">//-1</span></span><br><span class="line">a.indexOf(<span class="string">'e'</span>);<span class="comment">//4</span></span><br></pre></td></tr></table></figure>
-<h3 id="slice截取-切片-数组-得到截取的数组"><a href="#slice截取-切片-数组-得到截取的数组" class="headerlink" title="slice截取(切片)数组 得到截取的数组"></a>slice截取(切片)数组 得到截取的数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.slice(<span class="number">1</span>,<span class="number">3</span>);<span class="comment">//["b", "c"] a:['a','b','c','d','e']</span></span><br><span class="line">a.slice(<span class="number">0</span>,<span class="number">4</span>);<span class="comment">//["a", "b", "c", "d"]</span></span><br><span class="line">a.slice(<span class="number">3</span>,<span class="number">4</span>);<span class="comment">//["d"]</span></span><br></pre></td></tr></table></figure>
-<h3 id="splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始"><a href="#splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始" class="headerlink" title="splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始"></a>splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*参数是2个*/</span></span><br><span class="line"><span class="comment">//第一参数是索引（从0开始），第二是长度</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">//["a", "b"] a:["c", "d", "e"]</span></span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">//["c", "d"] a:["e"]</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">1</span>);<span class="comment">//["a"] a:["b", "c", "d", "e"] 同shift前删除</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]</span><br><span class="line">a.splice(a.length<span class="number">-1</span>,<span class="number">1</span>)<span class="comment">//["e"] a:["a", "b", "c", "d"] 同pop前删除</span></span><br><span class="line"><span class="comment">/*参数大于2个*/</span></span><br><span class="line"><span class="comment">//splice(start,deleteCount,val1,val2,...)：从start位置开始删除deleteCount项，并从该位置起插入val1,val2,... </span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">3</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">21</span>,<span class="number">238</span>,<span class="number">99</span>);<span class="comment">//["d"] a:["a", "b", "c", 10, 21, 238, 99, "e"]</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(a.length,<span class="number">100000000</span>,<span class="number">88</span>)<span class="comment">//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：["a", "b", "c", "d", "e", 88] 同push后增加</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(a.length,<span class="number">0</span>,<span class="number">88</span>)<span class="comment">//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：["a", "b", "c", "d", "e", 88] 同push后增加</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>];</span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="number">88</span>,<span class="number">99</span>)<span class="comment">//返回 [] 从第一个元素，截取长度0个 肯定是空 a:[88, 99, "a", "b", "c", "d", "e"] 同unshift前增加</span></span><br></pre></td></tr></table></figure>
-<h3 id="concat数组合并"><a href="#concat数组合并" class="headerlink" title="concat数组合并"></a>concat数组合并</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.concat([<span class="number">88</span>,<span class="number">99</span>]);<span class="comment">//["a", "b", "c", "d", "e", 88, 99] a:["a", "b", "c", "d", "e"]</span></span><br><span class="line"><span class="keyword">var</span> b= [<span class="number">9999</span>,<span class="number">10000</span>]</span><br><span class="line">a.concat(b);<span class="comment">// ["a", "b", "c", "d", "e", 9999, 10000] a:["a", "b", "c", "d", "e"]</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/11/17/zhishi/#more">more >></a>
+        
       
 
       
@@ -421,6 +434,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -580,156 +604,10 @@
 
 
   
-    <article id="post-article-title" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/article-title/">程序员如何赚「睡后」收入？</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/10/article-title/" class="archive-article-date">
-  	<time datetime="2017-11-10T07:28:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前两天，有读者问我这么一个问题：「张哥，我是一个工作两年左右的程序员，但是想多赚点钱，就想到接点外包单子做做，不知道可行不？求张哥指点下。」</p>
-<p>我个人觉得想多赚点钱这种想法非常好，我也非常支持，绝大部分情况下，赚钱会促使你进步。但是接私活是不是一种比较好的赚钱方式呢？且听我来给你分析下。</p>
-<p>我们上班打工，本质上是出售自己时间换取的收入。区别就是，有人把时间卖的单价高，有人卖的单价低，但是，所有人一天都是 24 小时啊，如果仅仅但是想靠这种方式，你拼搏努力可以衣食无忧，甚至过上小康生活，但是靠这种方式发财致富很难。</p>
-<p>但是也有人说了，我不想发财致富，我就想上班多赚点，提升下自己的生活质量就好了。如果你是这种心态，完全没问题，想靠出售时间多赚点，那么只有以下两种方式：</p>
-<ol>
-<li>提升自己的单位时间价格。这个很好理解，高级工程师比初级工程师工资高，本质上就是因为高级工程师的单价比初级工程师的高，所以提升自己在专业领域的能力，积累经验，以后不管你升值加薪还是跳槽，都可以达到提升单位时间价格的目的。</li>
-</ol>
-<ol>
-<li>增加自己可出售的时间。什么意思呢？一样的单价，别人工作 8 小时，业余时间 3 小时，你也工作 8 小时，业余时间 3 小时拿出 2 小时继续工作，那总收入就会比别人高，这种靠堆时间，靠拼来增加收入。</li>
-</ol>
-<p>说到这里，我们再回头看看接私活这种，毫无疑问，接私活就属于第二种「增加自己可出售的时间」，所以，程序员想接私活完全可以的，但是，这里有个性价比的问题。</p>
-<p>如果现在的单位时间价格不高，还有很大的提升潜力，那么接私活的时间用在提升自己能力，从而可以提升自己的单位时间价格，那么才是最优策略。而如果你接私活的单位时间价格还可以，那么就可以考虑接，而且我也建议，接私活的单价一定要比你上班的单价高，这种从经济学的角度来说，才是比较划算的。</p>
-<p>但是接私活不属于「睡后」收入，那么，什么是「睡后」收入呢？顾名思义，就是，让你睡觉都能赚钱。毫无疑问，接私活不属于这种，你必须做完一个接一个，才能持续赚到这份辛苦钱。那么，什么样的工作才算得上「睡后」收入呢？</p>
-<p>程序员比较能接受的比如写书、录制课程，这种就属于「睡后」收入了，花一段时间写完一本书、或者录制一套收费课程，之后，就靠渠道帮你推广，只要一直有人付费购买，那你就永远可以睡着赚钱。当然了，这里只是举个例子，写书、录制课程钱也没那么好赚，你写的够不够好，有没有影响力，有没有渠道资源帮你推广等等，都决定了你是否可以睡着赚大钱，但它们是属于「睡后」收入的一种方式。</p>
-<p>还有，早几年移动互联网刚起步的几年，流量红利时期，很多聪明的程序员就做了一些 App，集成一些广告，然后就躺着赚钱了，早期做的，而且还能赚到不少钱，再早几年的网站、博客等，抓点聚合内容，放点广告，都是属于「睡后」收入的方式。</p>
-<p>你会发现，「睡后」收入不一定可以赚大钱，但是只要你写的书火了，你做的 App 用的人多了，你做的课程口碑不错，有渠道帮你推荐宣传，那么这种方式赚钱很容易，后期你几乎不用再投入多少时间，真的是睡着就把钱给赚了，相比于出售时间来赚钱，「睡后」收入潜力很大，想象空间更大。</p>
-<p>除以上之外，还有一种适合所有人的「睡后」收入方式，这就是我之前一直跟大家普及的投资理财，投资理财说白了，就是用钱来帮你赚钱，仔细想想，那些有钱人之所以越来越有钱，就是因为他们懂得钱生钱，有人投资公司、有人玩股票、玩期货，有人买基金、理财、国债等，可能有些人一听我说投资理财就反感，过来人的经验告诉你，投资理财真的很重要，而且这是每个人都可以增加「睡后」收入最简单直接的方式，就说一句，我这一两年内的理财与定投，可以让我少奋斗两年。不过，我们普通人是不具备金融方面的专业知识的，公开场合我不推荐大家玩一些高风险的投资品种，有兴趣的可以了解些基金和理财方面的知识，很值得去尝试下。</p>
-<p>总之，如果大家想赚一些外快，优先推荐选择「睡后」收入的方式，其次再选择提升自己单位时间价格的方式，最后再选择堆时间来赚钱的方式，别看很可能一开始没多大差别，但是时间长了，你所选择的方式会导致差距千差万别。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/article-title/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/hello-world/">第一次使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/10/hello-world/" class="archive-article-date">
-  	<time datetime="2017-11-10T06:33:26.183Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>世界很精彩！</p>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510747199803&di=d8079fa316852f5319306f2214840793&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201511%2F20%2F20151120130851_fmX4L.jpeg" width="600" title="卡牌大师"></p>
-<p>##有问题反馈<br>在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</p>
-<ul>
-<li>邮件: (divineito@163.com)</li>
-<li>QQ: 1040964968</li>
-<li>weibo: <a href="https://18701932036.github.io" title="MSN Search" target="_blank" rel="external">@无言</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -757,7 +635,7 @@
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
-		open_in_new: false,
+		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
 		innerArchive: true,
@@ -821,6 +699,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
