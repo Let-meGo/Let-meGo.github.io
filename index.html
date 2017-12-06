@@ -159,6 +159,81 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-IE与FF兼容问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/06/IE与FF兼容问题/">IE与FF兼容问题</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/06/IE与FF兼容问题/" class="archive-article-date">
+  	<time datetime="2017-12-06T02:01:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="如何处理IE和Firefox如果处理事件兼容性"><a href="#如何处理IE和Firefox如果处理事件兼容性" class="headerlink" title="如何处理IE和Firefox如果处理事件兼容性"></a>如何处理IE和Firefox如果处理事件兼容性</h3><p> 获取事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">et</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> event = <span class="built_in">window</span>.event || e</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p> 键盘值的获取： Firfox下event.which和IE的event.keyCode相当<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> key = event.keyCode || event.which</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p> 事件源的获取：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> target = event.srcElement || event.target</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p> 事件监听:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">IE: element.attacthEvent(<span class="string">'on'</span> + eventName, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)</span><br><span class="line">Firfox: element.addEventListener(eventName, handler, <span class="literal">false</span>)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p> 鼠标位置： 在IE下，event对象有x、y属性，在Firfox下，event有PageX, PageY属性 所有获取鼠标位置时：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x = event.x || event.pageX</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p> 阻止默认浏览器行为：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.preventDefault() || event.returnValue = <span class="literal">false</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<p> 阻止冒泡事件：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e.stopPropagation() || event.cancelBubble = <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/06/IE与FF兼容问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-简易响应式布局" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
