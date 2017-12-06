@@ -178,6 +178,10 @@
             </header>
             
                 <div class="article-entry" itemprop="articleBody">
+
+                    <span id="busuanzi_container_site_pv" style='display:none;color:orange;'>
+                            本文总阅读量<span id="busuanzi_value_page_pv" style="color:red;"></span>次
+                    </span>
                     
                                         <h1 id="阶乘的实现方法（一种递归，两种循环）："><a href="#阶乘的实现方法（一种递归，两种循环）：" class="headerlink" title="阶乘的实现方法（一种递归，两种循环）："></a>阶乘的实现方法（一种递归，两种循环）：</h1><h2 id="方法1：递归"><a href="#方法1：递归" class="headerlink" title="方法1：递归"></a>方法1：递归</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (num &lt; <span class="number">0</span>) &#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>; </span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (num === <span class="number">0</span> || num === <span class="number">1</span>) &#123; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>; </span><br><span class="line">&#125; <span class="keyword">else</span> &#123; </span><br><span class="line">    <span class="keyword">return</span> (num * factorial(num - <span class="number">1</span>)); </span><br><span class="line">&#125;</span><br><span class="line">&#125;; factorial(<span class="number">6</span>);<span class="comment">//720</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
