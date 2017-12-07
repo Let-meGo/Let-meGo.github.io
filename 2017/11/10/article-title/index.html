@@ -6,21 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>程序员如何赚「睡后」收入？ | Edward的个人博客</title>
+  <title>程序员如何赚「睡后」收入？ | Edward的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前两天，有读者问我这么一个问题：「张哥，我是一个工作两年左右的程序员，但是想多赚点钱，就想到接点外包单子做做，不知道可行不？求张哥指点下。」 我个人觉得想多赚点钱这种想法非常好，我也非常支持，绝大部分情况下，赚钱会促使你进步。但是接私活是不是一种比较好的赚钱方式呢？且听我来给你分析下。 我们上班打工，本质上是出售自己时间换取的收入。区别就是，有人把时间卖的单价高，有人卖的单价低，但是，所有人一天都">
+<meta name="keywords" content="文章">
 <meta property="og:type" content="article">
 <meta property="og:title" content="程序员如何赚「睡后」收入？">
 <meta property="og:url" content="http://yoursite.com/2017/11/10/article-title/index.html">
-<meta property="og:site_name" content="Edward的个人博客">
+<meta property="og:site_name" content="Edward的博客">
 <meta property="og:description" content="前两天，有读者问我这么一个问题：「张哥，我是一个工作两年左右的程序员，但是想多赚点钱，就想到接点外包单子做做，不知道可行不？求张哥指点下。」 我个人觉得想多赚点钱这种想法非常好，我也非常支持，绝大部分情况下，赚钱会促使你进步。但是接私活是不是一种比较好的赚钱方式呢？且听我来给你分析下。 我们上班打工，本质上是出售自己时间换取的收入。区别就是，有人把时间卖的单价高，有人卖的单价低，但是，所有人一天都">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2017-11-16T02:08:58.012Z">
+<meta property="og:updated_time" content="2017-12-07T02:17:25.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序员如何赚「睡后」收入？">
 <meta name="twitter:description" content="前两天，有读者问我这么一个问题：「张哥，我是一个工作两年左右的程序员，但是想多赚点钱，就想到接点外包单子做做，不知道可行不？求张哥指点下。」 我个人觉得想多赚点钱这种想法非常好，我也非常支持，绝大部分情况下，赚钱会促使你进步。但是接私活是不是一种比较好的赚钱方式呢？且听我来给你分析下。 我们上班打工，本质上是出售自己时间换取的收入。区别就是，有人把时间卖的单价高，有人卖的单价低，但是，所有人一天都">
   
-    <link rel="alternative" href="/atom.xml" title="Edward的个人博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Edward的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/logo.jpg">
@@ -53,7 +54,7 @@
 		  <h1 class="header-author"><a href="/">Edward_fy</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">有多大的思想,才有多大的能量. So! 粘贴复制就是干.</p>
+		<p class="header-subtitle">从不浪费时间的人，没有工夫抱怨时间不够.</p>
 		
 
 		<nav class="header-menu">
@@ -113,7 +114,7 @@
 			  <h1 class="header-author js-header-author">Edward_fy</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>有多大的思想,才有多大的能量. So! 粘贴复制就是干.<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>从不浪费时间的人，没有工夫抱怨时间不够.<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -239,6 +240,17 @@
         <div class="article-info article-info-index">
             
                     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">文章</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
                         
 
                             
@@ -391,6 +403,36 @@ window.YiliaChangyanWrap = function() {
 
                                                                 
                                                                             
+
+
+                                                                                <!-- 目录内容 -->
+                                                                                
+                                                                                    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+                                                                                        <span class="btn-bg"></span>
+                                                                                        <span class="btn-text">文章导航</span>
+                                                                                    </p>
+                                                                                    <div id="toc-article" class="toc-article">
+                                                                                        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                                                                                        <strong class="toc-title">文章目录</strong>
+                                                                                        
+                                                                                    </div>
+                                                                                    <script type="text/javascript">
+                                                                                        function showToc() {
+                                                                                            var toc_article = document.getElementById("toc-article");
+                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
+                                                                                            toc_article.setAttribute("style", "display:block");
+                                                                                            show_toc_btn.setAttribute("style", "display:none");
+                                                                                        };
+
+                                                                                        function showBtn() {
+                                                                                            var toc_article = document.getElementById("toc-article");
+                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
+                                                                                            toc_article.setAttribute("style", "display:none");
+                                                                                            show_toc_btn.setAttribute("style", "display:block");
+                                                                                        };
+                                                                                    </script>
+                                                                                    
+                                                                                        <!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -407,8 +449,7 @@ window.YiliaChangyanWrap = function() {
             </div>
         </div>
     </div>
-    本站访客数 <span id="busuanzi_value_site_uv" style="color:red"></span> 人次 本文总阅读量
-    <span id="busuanzi_value_page_pv" style="color:orange"></span> 次
+    本站访客数 <span id="busuanzi_value_site_uv" style="color:red"></span> 人次
 </footer>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
@@ -496,6 +537,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Javascript css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Javascript           css</a>
               </li>
             
             <div class="clearfix"></div>

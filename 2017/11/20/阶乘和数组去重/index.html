@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>阶乘和数组去重 | Edward的个人博客</title>
+  <title>阶乘和数组去重 | Edward的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="阶乘的实现方法（一种递归，两种循环）：方法1：递归12345678910function factorial (num) &amp;#123;if (num &amp;lt; 0) &amp;#123;     return -1; &amp;#125; else if (num === 0 || num === 1) &amp;#123;     return 1; &amp;#125; else &amp;#123;     return (num">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="阶乘和数组去重">
 <meta property="og:url" content="http://yoursite.com/2017/11/20/阶乘和数组去重/index.html">
-<meta property="og:site_name" content="Edward的个人博客">
+<meta property="og:site_name" content="Edward的博客">
 <meta property="og:description" content="阶乘的实现方法（一种递归，两种循环）：方法1：递归12345678910function factorial (num) &amp;#123;if (num &amp;lt; 0) &amp;#123;     return -1; &amp;#125; else if (num === 0 || num === 1) &amp;#123;     return 1; &amp;#125; else &amp;#123;     return (num">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2017-12-06T05:57:34.470Z">
+<meta property="og:updated_time" content="2017-12-07T02:17:11.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阶乘和数组去重">
 <meta name="twitter:description" content="阶乘的实现方法（一种递归，两种循环）：方法1：递归12345678910function factorial (num) &amp;#123;if (num &amp;lt; 0) &amp;#123;     return -1; &amp;#125; else if (num === 0 || num === 1) &amp;#123;     return 1; &amp;#125; else &amp;#123;     return (num">
   
-    <link rel="alternative" href="/atom.xml" title="Edward的个人博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Edward的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/logo.jpg">
@@ -54,7 +54,7 @@
 		  <h1 class="header-author"><a href="/">Edward_fy</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">有多大的思想,才有多大的能量. So! 粘贴复制就是干.</p>
+		<p class="header-subtitle">从不浪费时间的人，没有工夫抱怨时间不够.</p>
 		
 
 		<nav class="header-menu">
@@ -114,7 +114,7 @@
 			  <h1 class="header-author js-header-author">Edward_fy</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>有多大的思想,才有多大的能量. So! 粘贴复制就是干.<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>从不浪费时间的人，没有工夫抱怨时间不够.<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -393,6 +393,36 @@ window.YiliaChangyanWrap = function() {
 
                                                                 
                                                                             
+
+
+                                                                                <!-- 目录内容 -->
+                                                                                
+                                                                                    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+                                                                                        <span class="btn-bg"></span>
+                                                                                        <span class="btn-text">文章导航</span>
+                                                                                    </p>
+                                                                                    <div id="toc-article" class="toc-article">
+                                                                                        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                                                                                        <strong class="toc-title">文章目录</strong>
+                                                                                        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#阶乘的实现方法（一种递归，两种循环）："><span class="toc-number">1.</span> <span class="toc-text">阶乘的实现方法（一种递归，两种循环）：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#方法1：递归"><span class="toc-number">1.1.</span> <span class="toc-text">方法1：递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法2：for循环"><span class="toc-number">1.2.</span> <span class="toc-text">方法2：for循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法3：while循环"><span class="toc-number">1.3.</span> <span class="toc-text">方法3：while循环</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数组去重的四种方法"><span class="toc-number">2.</span> <span class="toc-text">数组去重的四种方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-最基本的去重方法"><span class="toc-number">2.1.</span> <span class="toc-text">1.最基本的去重方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-先排序在去重"><span class="toc-number">2.2.</span> <span class="toc-text">2.先排序在去重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-利用对象的属性去重（推荐）"><span class="toc-number">2.3.</span> <span class="toc-text">3.利用对象的属性去重（推荐）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-利用下标查询"><span class="toc-number">2.4.</span> <span class="toc-text">4.利用下标查询</span></a></li></ol></li></ol>
+                                                                                    </div>
+                                                                                    <script type="text/javascript">
+                                                                                        function showToc() {
+                                                                                            var toc_article = document.getElementById("toc-article");
+                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
+                                                                                            toc_article.setAttribute("style", "display:block");
+                                                                                            show_toc_btn.setAttribute("style", "display:none");
+                                                                                        };
+
+                                                                                        function showBtn() {
+                                                                                            var toc_article = document.getElementById("toc-article");
+                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
+                                                                                            toc_article.setAttribute("style", "display:none");
+                                                                                            show_toc_btn.setAttribute("style", "display:block");
+                                                                                        };
+                                                                                    </script>
+                                                                                    
+                                                                                        <!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -409,8 +439,7 @@ window.YiliaChangyanWrap = function() {
             </div>
         </div>
     </div>
-    本站访客数 <span id="busuanzi_value_site_uv" style="color:red"></span> 人次 本文总阅读量
-    <span id="busuanzi_value_page_pv" style="color:orange"></span> 次
+    本站访客数 <span id="busuanzi_value_site_uv" style="color:red"></span> 人次
 </footer>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
@@ -498,6 +527,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Javascript css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Javascript           css</a>
               </li>
             
             <div class="clearfix"></div>

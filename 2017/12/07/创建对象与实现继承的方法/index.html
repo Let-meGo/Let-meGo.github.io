@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并) | Edward的博客</title>
+  <title>创建对象与实现继承的方法 | Edward的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]">
+  <meta name="description" content="一.实现继承的方法 借用构造函数实现继承： 1234567function Parent1()&amp;#123;    this.name = &quot;parent1&quot;&amp;#125;function Child1()&amp;#123;    Parent1.call(this);    this.type = &quot;child1&quot;;&amp;#125;  借用原型链实现继承： 12345678function Parent2()">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)">
-<meta property="og:url" content="http://yoursite.com/2017/11/17/zhishi/index.html">
+<meta property="og:title" content="创建对象与实现继承的方法">
+<meta property="og:url" content="http://yoursite.com/2017/12/07/创建对象与实现继承的方法/index.html">
 <meta property="og:site_name" content="Edward的博客">
-<meta property="og:description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]">
+<meta property="og:description" content="一.实现继承的方法 借用构造函数实现继承： 1234567function Parent1()&amp;#123;    this.name = &quot;parent1&quot;&amp;#125;function Child1()&amp;#123;    Parent1.call(this);    this.type = &quot;child1&quot;;&amp;#125;  借用原型链实现继承： 12345678function Parent2()">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2017-12-07T02:17:49.437Z">
+<meta property="og:updated_time" content="2017-12-07T06:04:25.170Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)">
-<meta name="twitter:description" content="POP 删除最后一项1234var a = [1,2,3,4,5];a.pop(); //a：[1, 2, 3, 4]a.pop(); //a：[1, 2, 3]a.pop(); //a：[1, 2] shift 删除第一项123var a = [1,2,3,4,5]; a.shift(); //a：[2,3,4,5]a.shift(); //a：[3, 4, 5]">
+<meta name="twitter:title" content="创建对象与实现继承的方法">
+<meta name="twitter:description" content="一.实现继承的方法 借用构造函数实现继承： 1234567function Parent1()&amp;#123;    this.name = &quot;parent1&quot;&amp;#125;function Child1()&amp;#123;    Parent1.call(this);    this.type = &quot;child1&quot;;&amp;#125;  借用原型链实现继承： 12345678function Parent2()">
   
     <link rel="alternative" href="/atom.xml" title="Edward的博客" type="application/atom+xml">
   
@@ -159,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-zhishi" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-创建对象与实现继承的方法" class="article article-type-post " itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
   
     <h1 class="article-title" itemprop="name">
-      JS数组操作(数组增加、删除、翻转、转字符串、取索引、截取(切片)slice、剪接splice、数组合并)
+      创建对象与实现继承的方法
     </h1>
   
 
                     
-                        <a href="/2017/11/17/zhishi/" class="archive-article-date">
-  	<time datetime="2017-11-17T06:02:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-17</time>
+                        <a href="/2017/12/07/创建对象与实现继承的方法/" class="archive-article-date">
+  	<time datetime="2017-12-07T02:08:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-07</time>
 </a>
                             
             </header>
@@ -183,17 +183,30 @@
                             本文总阅读量<span id="busuanzi_value_page_pv" style="color:red;"></span>次
                     </span>
                     
-                                        <h3 id="POP-删除最后一项"><a href="#POP-删除最后一项" class="headerlink" title="POP 删除最后一项"></a>POP 删除最后一项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2, 3, 4]</span></span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2, 3]</span></span><br><span class="line">a.pop(); <span class="comment">//a：[1, 2]</span></span><br></pre></td></tr></table></figure>
-<h3 id="shift-删除第一项"><a href="#shift-删除第一项" class="headerlink" title="shift 删除第一项"></a>shift 删除第一项</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.shift(); <span class="comment">//a：[2,3,4,5]</span></span><br><span class="line">a.shift(); <span class="comment">//a：[3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+                                        <h2 id="一-实现继承的方法"><a href="#一-实现继承的方法" class="headerlink" title="一.实现继承的方法"></a>一.实现继承的方法</h2><ul>
+<li><p>借用构造函数实现继承：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"parent1"</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child1</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    Parent1.call(<span class="keyword">this</span>);</span><br><span class="line">    <span class="keyword">this</span>.type = <span class="string">"child1"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>借用原型链实现继承：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"parent2"</span>;</span><br><span class="line">    <span class="keyword">this</span>.play = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child2</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.type = <span class="string">"child2"</span>;</span><br><span class="line">&#125;</span><br><span class="line">Child2.prototype = <span class="keyword">new</span> Parent2();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <a id="more"></a>
-<h3 id="push-增加到最后"><a href="#push-增加到最后" class="headerlink" title="push 增加到最后"></a>push 增加到最后</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.push(<span class="number">6</span>); <span class="comment">//[1, 2, 3, 4, 5, 6]</span></span><br><span class="line">aa.push(<span class="string">'xx'</span>); <span class="comment">//[1, 2, 3, 4, 5, 6, "xx"] 返回长度7</span></span><br><span class="line">a.push(<span class="string">'yy'</span>); <span class="comment">//[1, 2, 3, 4, 5, 6, "xx", "yy"] 返回长度8</span></span><br></pre></td></tr></table></figure>
-<h3 id="unshift增加到最前"><a href="#unshift增加到最前" class="headerlink" title="unshift增加到最前"></a>unshift增加到最前</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.unshift();<span class="comment">//[1, 2, 3, 4, 5]</span></span><br><span class="line">a.unshift(<span class="string">"cc"</span>);<span class="comment">//["cc", 1, 2, 3, 4, 5] 返回长度6</span></span><br><span class="line">a.unshift(<span class="string">"aaa"</span>);<span class="comment">//["aaa", "cc", 1, 2, 3, 4, 5] 返回长度7</span></span><br></pre></td></tr></table></figure>
-<h3 id="reverse-数组翻转"><a href="#reverse-数组翻转" class="headerlink" title="reverse 数组翻转"></a>reverse 数组翻转</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line">a.reverse()<span class="comment">//a：[5, 4, 3, 2, 1] 返回[5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure>
-<h3 id="join数组转成字符串"><a href="#join数组转成字符串" class="headerlink" title="join数组转成字符串"></a>join数组转成字符串</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]; </span><br><span class="line"><span class="keyword">var</span> b=a.join(<span class="string">'||'</span>);<span class="comment">//b:"1||2||3||4||5" a:[1,2,3,4,5]</span></span><br></pre></td></tr></table></figure>
-<h3 id="indexOf数组元素索引"><a href="#indexOf数组元素索引" class="headerlink" title="indexOf数组元素索引"></a>indexOf数组元素索引</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.indexOf(<span class="string">'a'</span>);<span class="comment">//0</span></span><br><span class="line">a.indexOf(a);<span class="comment">//-1</span></span><br><span class="line">a.indexOf(<span class="string">'f'</span>);<span class="comment">//-1</span></span><br><span class="line">a.indexOf(<span class="string">'e'</span>);<span class="comment">//4</span></span><br></pre></td></tr></table></figure>
-<h3 id="slice截取-切片-数组-得到截取的数组"><a href="#slice截取-切片-数组-得到截取的数组" class="headerlink" title="slice截取(切片)数组 得到截取的数组"></a>slice截取(切片)数组 得到截取的数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.slice(<span class="number">1</span>,<span class="number">3</span>);<span class="comment">//["b", "c"] a:['a','b','c','d','e']</span></span><br><span class="line">a.slice(<span class="number">0</span>,<span class="number">4</span>);<span class="comment">//["a", "b", "c", "d"]</span></span><br><span class="line">a.slice(<span class="number">3</span>,<span class="number">4</span>);<span class="comment">//["d"]</span></span><br></pre></td></tr></table></figure>
-<h3 id="splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始"><a href="#splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始" class="headerlink" title="splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始"></a>splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*参数是2个*/</span></span><br><span class="line"><span class="comment">//第一参数是索引（从0开始），第二是长度</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">//["a", "b"] a:["c", "d", "e"]</span></span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">2</span>);<span class="comment">//["c", "d"] a:["e"]</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">1</span>);<span class="comment">//["a"] a:["b", "c", "d", "e"] 同shift前删除</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]</span><br><span class="line">a.splice(a.length<span class="number">-1</span>,<span class="number">1</span>)<span class="comment">//["e"] a:["a", "b", "c", "d"] 同pop前删除</span></span><br><span class="line"><span class="comment">/*参数大于2个*/</span></span><br><span class="line"><span class="comment">//splice(start,deleteCount,val1,val2,...)：从start位置开始删除deleteCount项，并从该位置起插入val1,val2,... </span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(<span class="number">3</span>,<span class="number">1</span>,<span class="number">10</span>,<span class="number">21</span>,<span class="number">238</span>,<span class="number">99</span>);<span class="comment">//["d"] a:["a", "b", "c", 10, 21, 238, 99, "e"]</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(a.length,<span class="number">100000000</span>,<span class="number">88</span>)<span class="comment">//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：["a", "b", "c", "d", "e", 88] 同push后增加</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.splice(a.length,<span class="number">0</span>,<span class="number">88</span>)<span class="comment">//返回 [] 从最后元素后面的元素，截取长度任意个，肯定是空 a：["a", "b", "c", "d", "e", 88] 同push后增加</span></span><br><span class="line"><span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>];</span><br><span class="line">a.splice(<span class="number">0</span>,<span class="number">0</span>,<span class="number">88</span>,<span class="number">99</span>)<span class="comment">//返回 [] 从第一个元素，截取长度0个 肯定是空 a:[88, 99, "a", "b", "c", "d", "e"] 同unshift前增加</span></span><br></pre></td></tr></table></figure>
-<h3 id="concat数组合并"><a href="#concat数组合并" class="headerlink" title="concat数组合并"></a>concat数组合并</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">var</span> a = [<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'e'</span>]; </span><br><span class="line">a.concat([<span class="number">88</span>,<span class="number">99</span>]);<span class="comment">//["a", "b", "c", "d", "e", 88, 99] a:["a", "b", "c", "d", "e"]</span></span><br><span class="line"><span class="keyword">var</span> b= [<span class="number">9999</span>,<span class="number">10000</span>]</span><br><span class="line">a.concat(b);<span class="comment">// ["a", "b", "c", "d", "e", 9999, 10000] a:["a", "b", "c", "d", "e"]</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>组合式继承:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent3</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">"parent3"</span>;</span><br><span class="line">    <span class="keyword">this</span>.play = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child3</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    Parent3.call(<span class="keyword">this</span>);</span><br><span class="line">    <span class="keyword">this</span>.type = <span class="string">"child3"</span>;</span><br><span class="line">&#125;</span><br><span class="line">Child3.prototype = <span class="built_in">Object</span>.create(Parent3.prototype);</span><br><span class="line">Child3.prototype.constructor = Child3;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="二-创建对象的方法"><a href="#二-创建对象的方法" class="headerlink" title="二.创建对象的方法"></a>二.创建对象的方法</h2><ul>
+<li><p>工厂模式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">cratePerson</span> (<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>(</span><br><span class="line">    o.name = name </span><br><span class="line">    o.age = age </span><br><span class="line">    o.job = job </span><br><span class="line">    o.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> o </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = cratePerson(<span class="string">'Greg'</span>, <span class="number">27</span>, <span class="string">'Doctor'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>构造函数:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span> (<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name </span><br><span class="line">    <span class="keyword">this</span>.age = age </span><br><span class="line">    <span class="keyword">this</span>.job = job </span><br><span class="line">    <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.name )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = cratePerson(<span class="string">'Greg'</span>, <span class="number">27</span>, <span class="string">'Doctor'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原型模式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.name = <span class="string">'Greg'</span></span><br><span class="line">Person.prototype.age = <span class="number">18</span></span><br><span class="line">Person.prototype.job = <span class="string">'Doctor'</span></span><br><span class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person()</span><br><span class="line">person1.sayName()   <span class="comment">// Greg</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
                                             
 
                                                 
@@ -293,7 +306,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/11/17/zhishi/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/07/创建对象与实现继承的方法/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -307,18 +320,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/20/阶乘和数组去重/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          阶乘和数组去重
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/11/15/我的日记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">搭建个人博客-Hexo+github</div>
+    <a href="/2017/12/06/IE与FF兼容问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">IE与FF兼容问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -345,7 +349,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#POP-删除最后一项"><span class="toc-number">1.</span> <span class="toc-text">POP 删除最后一项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shift-删除第一项"><span class="toc-number">2.</span> <span class="toc-text">shift 删除第一项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#push-增加到最后"><span class="toc-number">3.</span> <span class="toc-text">push 增加到最后</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unshift增加到最前"><span class="toc-number">4.</span> <span class="toc-text">unshift增加到最前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reverse-数组翻转"><span class="toc-number">5.</span> <span class="toc-text">reverse 数组翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#join数组转成字符串"><span class="toc-number">6.</span> <span class="toc-text">join数组转成字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#indexOf数组元素索引"><span class="toc-number">7.</span> <span class="toc-text">indexOf数组元素索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#slice截取-切片-数组-得到截取的数组"><span class="toc-number">8.</span> <span class="toc-text">slice截取(切片)数组 得到截取的数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始"><span class="toc-number">9.</span> <span class="toc-text">splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#concat数组合并"><span class="toc-number">10.</span> <span class="toc-text">concat数组合并</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一-实现继承的方法"><span class="toc-number">1.</span> <span class="toc-text">一.实现继承的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二-创建对象的方法"><span class="toc-number">2.</span> <span class="toc-text">二.创建对象的方法</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -361,7 +365,7 @@
                                 
 
                                             
-                                                <div id="SOHUCS" sid="zhishi" ></div> 
+                                                <div id="SOHUCS" sid="创建对象与实现继承的方法" ></div> 
 <script type="text/javascript"> 
 window.YiliaChangyanWrap = function() {
     var appid = "cytlPNv3u"; 
@@ -399,31 +403,6 @@ window.YiliaChangyanWrap = function() {
 
                                                                                 <!-- 目录内容 -->
                                                                                 
-                                                                                    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-                                                                                        <span class="btn-bg"></span>
-                                                                                        <span class="btn-text">文章导航</span>
-                                                                                    </p>
-                                                                                    <div id="toc-article" class="toc-article">
-                                                                                        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-                                                                                        <strong class="toc-title">文章目录</strong>
-                                                                                        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#POP-删除最后一项"><span class="toc-number">1.</span> <span class="toc-text">POP 删除最后一项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shift-删除第一项"><span class="toc-number">2.</span> <span class="toc-text">shift 删除第一项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#push-增加到最后"><span class="toc-number">3.</span> <span class="toc-text">push 增加到最后</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unshift增加到最前"><span class="toc-number">4.</span> <span class="toc-text">unshift增加到最前</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reverse-数组翻转"><span class="toc-number">5.</span> <span class="toc-text">reverse 数组翻转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#join数组转成字符串"><span class="toc-number">6.</span> <span class="toc-text">join数组转成字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#indexOf数组元素索引"><span class="toc-number">7.</span> <span class="toc-text">indexOf数组元素索引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#slice截取-切片-数组-得到截取的数组"><span class="toc-number">8.</span> <span class="toc-text">slice截取(切片)数组 得到截取的数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#splice剪接数组-原数组变化-可以实现shift前删除，pop后删除-unshift前增加-同push后增加一样的效果-返回剪接的元素数组-原数组变化-，索引从0开始"><span class="toc-number">9.</span> <span class="toc-text">splice剪接数组 原数组变化 可以实现shift前删除，pop后删除,unshift前增加,同push后增加一样的效果,返回剪接的元素数组,原数组变化 ，索引从0开始</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#concat数组合并"><span class="toc-number">10.</span> <span class="toc-text">concat数组合并</span></a></li></ol>
-                                                                                    </div>
-                                                                                    <script type="text/javascript">
-                                                                                        function showToc() {
-                                                                                            var toc_article = document.getElementById("toc-article");
-                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
-                                                                                            toc_article.setAttribute("style", "display:block");
-                                                                                            show_toc_btn.setAttribute("style", "display:none");
-                                                                                        };
-
-                                                                                        function showBtn() {
-                                                                                            var toc_article = document.getElementById("toc-article");
-                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
-                                                                                            toc_article.setAttribute("style", "display:none");
-                                                                                            show_toc_btn.setAttribute("style", "display:block");
-                                                                                        };
-                                                                                    </script>
-                                                                                    
                                                                                         <!-- 目录内容结束 -->
           </div>
         </div>

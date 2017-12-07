@@ -6,23 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>第一次使用 | Edward的个人博客</title>
+  <title>第一次使用 | Edward的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="世界很精彩！  ##有问题反馈在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流  邮件: (divineito@163.com) QQ: 1040964968 weibo: @无言">
+<meta name="keywords" content="前端,js,jquery,javascript,html5,程序猿,程序媛,编程,代码,html,css,css3,用户体验">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一次使用">
 <meta property="og:url" content="http://yoursite.com/2017/11/10/hello-world/index.html">
-<meta property="og:site_name" content="Edward的个人博客">
+<meta property="og:site_name" content="Edward的博客">
 <meta property="og:description" content="世界很精彩！  ##有问题反馈在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流  邮件: (divineito@163.com) QQ: 1040964968 weibo: @无言">
 <meta property="og:locale" content="中文">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510747199803&di=d8079fa316852f5319306f2214840793&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201511%2F20%2F20151120130851_fmX4L.jpeg">
-<meta property="og:updated_time" content="2017-11-17T06:10:33.694Z">
+<meta property="og:updated_time" content="2017-12-07T02:17:37.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次使用">
 <meta name="twitter:description" content="世界很精彩！  ##有问题反馈在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流  邮件: (divineito@163.com) QQ: 1040964968 weibo: @无言">
 <meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1510747199803&di=d8079fa316852f5319306f2214840793&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201511%2F20%2F20151120130851_fmX4L.jpeg">
   
-    <link rel="alternative" href="/atom.xml" title="Edward的个人博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Edward的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/logo.jpg">
@@ -55,7 +56,7 @@
 		  <h1 class="header-author"><a href="/">Edward_fy</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">有多大的思想,才有多大的能量. So! 粘贴复制就是干.</p>
+		<p class="header-subtitle">从不浪费时间的人，没有工夫抱怨时间不够.</p>
 		
 
 		<nav class="header-menu">
@@ -115,7 +116,7 @@
 			  <h1 class="header-author js-header-author">Edward_fy</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>有多大的思想,才有多大的能量. So! 粘贴复制就是干.<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>从不浪费时间的人，没有工夫抱怨时间不够.<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -378,6 +379,36 @@ window.YiliaChangyanWrap = function() {
 
                                                                 
                                                                             
+
+
+                                                                                <!-- 目录内容 -->
+                                                                                
+                                                                                    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+                                                                                        <span class="btn-bg"></span>
+                                                                                        <span class="btn-text">文章导航</span>
+                                                                                    </p>
+                                                                                    <div id="toc-article" class="toc-article">
+                                                                                        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                                                                                        <strong class="toc-title">文章目录</strong>
+                                                                                        
+                                                                                    </div>
+                                                                                    <script type="text/javascript">
+                                                                                        function showToc() {
+                                                                                            var toc_article = document.getElementById("toc-article");
+                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
+                                                                                            toc_article.setAttribute("style", "display:block");
+                                                                                            show_toc_btn.setAttribute("style", "display:none");
+                                                                                        };
+
+                                                                                        function showBtn() {
+                                                                                            var toc_article = document.getElementById("toc-article");
+                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
+                                                                                            toc_article.setAttribute("style", "display:none");
+                                                                                            show_toc_btn.setAttribute("style", "display:block");
+                                                                                        };
+                                                                                    </script>
+                                                                                    
+                                                                                        <!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -394,8 +425,7 @@ window.YiliaChangyanWrap = function() {
             </div>
         </div>
     </div>
-    本站访客数 <span id="busuanzi_value_site_uv" style="color:red"></span> 人次 本文总阅读量
-    <span id="busuanzi_value_page_pv" style="color:orange"></span> 次
+    本站访客数 <span id="busuanzi_value_site_uv" style="color:red"></span> 人次
 </footer>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
@@ -483,6 +513,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Javascript css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Javascript           css</a>
               </li>
             
             <div class="clearfix"></div>

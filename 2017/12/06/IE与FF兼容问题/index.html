@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>IE与FF兼容问题 | Edward的个人博客</title>
+  <title>IE与FF兼容问题 | Edward的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which">
 <meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IE与FF兼容问题">
 <meta property="og:url" content="http://yoursite.com/2017/12/06/IE与FF兼容问题/index.html">
-<meta property="og:site_name" content="Edward的个人博客">
+<meta property="og:site_name" content="Edward的博客">
 <meta property="og:description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2017-12-06T08:02:34.771Z">
+<meta property="og:updated_time" content="2017-12-07T02:16:36.776Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IE与FF兼容问题">
 <meta name="twitter:description" content="如何处理IE和Firefox如果处理事件兼容性 获取事件123function et(e) &amp;#123;    let event = window.event || e&amp;#125;   键盘值的获取： Firfox下event.which和IE的event.keyCode相当1let key = event.keyCode || event.which">
   
-    <link rel="alternative" href="/atom.xml" title="Edward的个人博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Edward的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/assets/img/logo.jpg">
@@ -54,7 +54,7 @@
 		  <h1 class="header-author"><a href="/">Edward_fy</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">有多大的思想,才有多大的能量. So! 粘贴复制就是干.</p>
+		<p class="header-subtitle">从不浪费时间的人，没有工夫抱怨时间不够.</p>
 		
 
 		<nav class="header-menu">
@@ -114,7 +114,7 @@
 			  <h1 class="header-author js-header-author">Edward_fy</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>有多大的思想,才有多大的能量. So! 粘贴复制就是干.<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>从不浪费时间的人，没有工夫抱怨时间不够.<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -311,6 +311,15 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/12/07/创建对象与实现继承的方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          创建对象与实现继承的方法
+        
+      </div>
+    </a>
+  
   
     <a href="/2017/12/05/简易响应式布局/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">简易响应式布局</div>
@@ -390,6 +399,36 @@ window.YiliaChangyanWrap = function() {
 
                                                                 
                                                                             
+
+
+                                                                                <!-- 目录内容 -->
+                                                                                
+                                                                                    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+                                                                                        <span class="btn-bg"></span>
+                                                                                        <span class="btn-text">文章导航</span>
+                                                                                    </p>
+                                                                                    <div id="toc-article" class="toc-article">
+                                                                                        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+                                                                                        <strong class="toc-title">文章目录</strong>
+                                                                                        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何处理IE和Firefox如果处理事件兼容性"><span class="toc-number">1.</span> <span class="toc-text">如何处理IE和Firefox如果处理事件兼容性</span></a></li></ol>
+                                                                                    </div>
+                                                                                    <script type="text/javascript">
+                                                                                        function showToc() {
+                                                                                            var toc_article = document.getElementById("toc-article");
+                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
+                                                                                            toc_article.setAttribute("style", "display:block");
+                                                                                            show_toc_btn.setAttribute("style", "display:none");
+                                                                                        };
+
+                                                                                        function showBtn() {
+                                                                                            var toc_article = document.getElementById("toc-article");
+                                                                                            var show_toc_btn = document.getElementById("show-toc-btn");
+                                                                                            toc_article.setAttribute("style", "display:none");
+                                                                                            show_toc_btn.setAttribute("style", "display:block");
+                                                                                        };
+                                                                                    </script>
+                                                                                    
+                                                                                        <!-- 目录内容结束 -->
           </div>
         </div>
       </div>
@@ -406,8 +445,7 @@ window.YiliaChangyanWrap = function() {
             </div>
         </div>
     </div>
-    本站访客数 <span id="busuanzi_value_site_uv" style="color:red"></span> 人次 本文总阅读量
-    <span id="busuanzi_value_page_pv" style="color:orange"></span> 次
+    本站访客数 <span id="busuanzi_value_site_uv" style="color:red"></span> 人次
 </footer>
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
@@ -495,6 +533,18 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Javascript css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Javascript           css</a>
               </li>
             
             <div class="clearfix"></div>
