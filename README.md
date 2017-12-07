@@ -1,8 +1,8 @@
 # 项目介绍
 
-> 将新电脑的生成的ssh key添加到GitHub账户上
-> 在新电脑上克隆username.github.io仓库的xxx分支到本地，此时本地git仓库处于xxx分支
-> 切换到username.github.io目录，执行npm install(由于仓库有一个.gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录[也不需要]，所以需要install下)
+> * 将新电脑的生成的ssh key添加到GitHub账户上
+> * 在新电脑上克隆username.github.io仓库的xxx分支到本地，此时本地git仓库处于xxx分支
+> * 切换到username.github.io目录，执行npm install(由于仓库有一个.gitignore文件，里面默认是忽略掉 node_modules文件夹的，也就是说仓库的hexo分支并没有存储该目录[也不需要]，所以需要install下)
 
 
 ## 编写博客
